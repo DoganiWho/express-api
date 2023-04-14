@@ -1,2 +1,2 @@
 # express-api
-Learning how to build a REST-api with node + express and Hoppscotch.io
+Learning how to build a REST-api from scratch with node + express
