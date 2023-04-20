@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express()
-const PORT =  8080;
+const PORT =  3000;
 
 app.use(express.json());
 
@@ -19,12 +19,12 @@ app.get('/emoji', (req, res) => {
 
 app.post('/emoji:id', (req, res) => {
     const { id } = req.params;
-    const { logo } = req.body;
+    const { name } = req.body;
 
-    if (!logo) {
-        res.status(418).send({ message: 'We need a logo!' })
+    if (!name) {
+        res.status(418).send({ message: 'We need a name!' })
     }
 
-    res.send({ emoji: `Your selected emoji with ${logo} and ID of ${id}`,
+    res.send({ message: `Your selected emoji with ${name} and ID of ${id}`,
     })
 });
